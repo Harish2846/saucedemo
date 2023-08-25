@@ -24,13 +24,7 @@ public class Login_to_Logout extends commonactions {
 	@AfterTest
 
 	public static void reports() throws IOException {
-		/*
-		 * test.log(Status.FAIL,
-		 * MediaEntityBuilder.createScreenCaptureFromPath(screenshot("bag1")).build());
-		 * test.log(Status.PASS,
-		 * MediaEntityBuilder.createScreenCaptureFromBase64String(screenshot("bag1")).
-		 * build());
-		 */
+
 		generate_report();
 	}
 
@@ -41,11 +35,12 @@ public class Login_to_Logout extends commonactions {
 		username(getprop().getProperty("Uname"));
 		password(getprop().getProperty("Psward"));
 		loginbtn();
-		// screenshot("homepage");
+		screenshot("homepage");
 	}
 
 	@Test(priority = 2)
 	public static void addcart() throws IOException {
+
 		selectbag();
 
 	}
@@ -62,8 +57,11 @@ public class Login_to_Logout extends commonactions {
 
 	@Test(priority = 4)
 	public static void Applogout() throws IOException {
-		// screenshot("checkout");
+
+		screenshot("Bag");
 		Logout();
+		screenshot("checkout");
+		driver.close();
 
 	}
 
@@ -72,13 +70,10 @@ public class Login_to_Logout extends commonactions {
 
 		if (result.getStatus() == org.testng.ITestResult.FAILURE) {
 
-			// test.log(Status.FAIL,
-			// MediaEntityBuilder.createScreenCaptureFromBase64String(screenshot("bag1")).build());
 			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + "Failed", ExtentColor.RED));
 
 		} else if (result.getStatus() == org.testng.ITestResult.SUCCESS) {
-			// test.log(Status.PASS,
-			// MediaEntityBuilder.createScreenCaptureFromBase64String(screenshot("bag1")).build());
+
 			test.log(Status.PASS, MarkupHelper.createLabel(result.getName() + "Pass", ExtentColor.BLUE));
 
 		}

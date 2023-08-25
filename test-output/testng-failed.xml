@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Login_to_checkOut_flow.Login_multipleids">
+      <class name="Homepage_check.Homepage_test">
         <methods>
-          <include name="extentrepo"/>
-          <include name="launch" invocation-numbers="0 1 2 3"/>
-          <include name="extentrepogen"/>
+          <include name="Reports"/>
+          <include name="launch"/>
+          <include name="Whitshirt_mousehover"/>
+          <include name="extent_after_method"/>
         </methods>
-      </class> <!-- Login_to_checkOut_flow.Login_multipleids -->
+      </class> <!-- Homepage_check.Homepage_test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

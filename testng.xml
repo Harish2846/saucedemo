@@ -5,6 +5,8 @@
     <classes>
       <class name="Login_to_checkOut_flow.Login_to_Logout"/>
       <class name="Login_to_checkOut_flow.Login_multipleids"/>
+      <class name="Login_to_checkOut_flow.Loginpage_brokenlinks"/>
+      <class name="Homepage.Homepage_test"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
